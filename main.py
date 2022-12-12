@@ -11,3 +11,4 @@ def random_python():
 
 # Start the index.html file
 eel.start("index.html")
+eel.start('main.html',size = (1280,960))

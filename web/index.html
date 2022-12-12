@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PPDP</title>
+    <meta charset="utf-8">
+
+    <!-- eel.js , this is necessary  -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+	
+    <div class="modal modal-signin d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="container" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-12 pb-4 border-bottom-0">
+                    <!-- <h5 class="modal-title">Modal title</h5> -->
+                    <h2 class="fw-bold mb-0">我懶的每天推廣</h2>
+
+                </div>
+
+                <div class="modal-body p-12 pt-0">
+					<div class="border border-muted p-3 rounded" >
+						<p>論壇推文</p>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+							<label class="form-check-label" for="flexSwitchCheckChecked">棒棒糖論壇</label>
+						</div>
+
+						<form id="form1" class="pb-3">
+							<div class="input-group">
+								<span class="input-group-text">帳號</span>
+								<input type="text" aria-label="First name" class="form-control" id="webURL"
+									onchange="getTitle('form1')">
+								<span class="input-group-text ">密碼</span>
+								<input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+
+								<button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+									onclick="submit_click('form1')">驗證</button>
+							</div>
+							<div class="progress">
+								<p class="">每日推文完成度</p> 
+								<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+							</div>
+						</form>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+							<label class="form-check-label" for="flexSwitchCheckChecked">巴哈姆湯私服瘋</label>
+						</div>
+
+						<form id="form1" class="pb-3">
+							<div class="input-group">
+								<span class="input-group-text">帳號</span>
+								<input type="text" aria-label="First name" class="form-control" id="webURL"
+									onchange="getTitle('form1')">
+								<span class="input-group-text ">密碼</span>
+								<input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+
+								<button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+									onclick="submit_click('form1')">驗證</button>
+							</div>
+							<div class="progress">
+								<p class="">每日推文完成度</p> 
+								<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+							</div>
+						</form>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+							<label class="form-check-label" for="flexSwitchCheckDefault">卡普拉市集</label>
+						  </div>
+
+						<form id="form1" class="pb-3" hidden>
+							<div class="input-group">
+								<span class="input-group-text">帳號</span>
+								<input type="text" aria-label="First name" class="form-control" id.
+								.0  ="webURL"
+									onchange="getTitle('form1')">
+								<span class="input-group-text ">密碼</span>
+								<input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+
+								<button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+									onclick="submit_click('form1')">驗證</button>
+							</div>
+							<div class="progress">
+								<p class="">每日推文完成度</p> 
+								<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+							</div>
+						</form>
+						<hr>			
+						<div class="form-floating  mt-3">
+							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+							<label for="floatingTextarea">推文訊息</label>
+						</div>
+
+							
+					</div>
+					<div class="border border-muted p-3 mt-3 rounded" >
+						<p>FaceBook</p>
+						<form id="form1" class="pb-3 ">
+
+								<div class="input-group">
+									<span class="input-group-text">帳號</span>
+									<input type="text" aria-label="First name" class="form-control" id="webURL"
+										onchange="getTitle('form1')">
+									<span class="input-group-text ">密碼</span>
+									<input type="text" aria-label="Last name" class="form-control" id="fileName">
+									<button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+										onclick="submit_click('form1')">驗證</button>
+								</div>
+
+						</form>
+	
+					</div>					
+					<div class="border border-muted p-3 mt-3 rounded" >
+						<p>雨果論壇</p>
+						<form id="form1" class="pb-3 ">
+
+								<div class="input-group">
+									<span class="input-group-text">帳號</span>
+									<input type="text" aria-label="First name" class="form-control" id="webURL"
+										onchange="getTitle('form1')">
+									<span class="input-group-text ">密碼</span>
+									<input type="text" aria-label="Last name" class="form-control" id="fileName">
+	
+	
+									<button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+										onclick="submit_click('form1')">驗證</button>
+								</div>
+
+						</form>
+	
+					</div>
+                    <div class="form-floating mt-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                            style="height: 100px" disabled></textarea>
+                        <label for="floatingTextarea">系統訊息:</label>
+                    </div>
+                    <small class="text-muted"> Design from Web_Huang.</small>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+http://www.lollipop168.com/thread-24918-1-4.html
+https://bhmtsff.com/thread-7242-1-1.html
+https://kafra-mart.com/bbs/forum.php?mod=viewthread&tid=521

@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 eel = "*"
+selenium = "*"
+webdriver-manager = "*"
+bs4 = "*"
 
 [dev-packages]
 
